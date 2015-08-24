@@ -1503,8 +1503,7 @@ var beam;
 
       function n(t) {
         e.call(this, t);
-        this.base_url = window.location.host.indexOf("localhost") > -1 ? "http://localhost:3000/messages" : window.location.host.indexOf("staging.tweetbeam.com") > -1 ? "http://staging.tweetbeam.com/messages" : "http://www.tweetbeam.com/messages";
-        console.log(this.base_url);
+        this.base_url = window.location.host.indexOf("localhost") > -1 ? "http://localhost:3000/messages" : window.location.host.indexOf("afwall.herokuapp.com") > -1 ? "http://afwall.herokuapp.com/messages" : "http://afwall.herokuapp.com/messages";
         this.sinceId = null;
         this.pollingIntervalID = 0;
         this.twitterSettings = $.extend({}, new i, t["twittermessageprovider"])
@@ -1612,7 +1611,7 @@ var beam;
 
       function i(t) {
         e.call(this, t);
-        this.base_url = window.location.host.indexOf("localhost") > -1 ? "http://localhost:3000/messages" : window.location.host.indexOf("staging.tweetbeam.com") > -1 ? "http://staging.tweetbeam.com/2/messages" : "http://www.tweetbeam.com/2/messages";
+        this.base_url = window.location.host.indexOf("localhost") > -1 ? "http://localhost:3000/messages" : window.location.host.indexOf("afwall.herokuapp.com") > -1 ? "http://afwall.herokuapp.com/messages" : "http://afwall.herokuapp.com/messages";
         this.pollingIntervalID = 0;
         this.next_request = null;
         this.sessionCount = 0;
