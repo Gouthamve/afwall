@@ -31,7 +31,16 @@ router.get('/config', function(req, res, next) {
 		}
 	}
    ,view:{type:"beam.view.classic.ClassicView",
-	   classic:{message_tag: "TheAugustFest",show_instagram_logo:true, message_prefix:"Tag your posts with"}}}
+	   classic:{message_tag: "TheAugustFest",
+		   show_instagram_logo:true,
+		    message_prefix:"Tag your posts with",
+			fake_swaps:true,
+			swap_interval:500,
+			licensed:true,
+			branding_content:""
+			}
+			}
+	}
 );
 });
 
