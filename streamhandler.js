@@ -5,17 +5,10 @@ module.exports = function(stream){
   // When tweets get sent our way ...
   stream.on('data', function(data) {
 
-console.log(JSON.stringify(data));
     // Construct a new tweet object
-    var tweet = {
-      twid: data['id'],
-      active: false,
-      author: data['user']['name'],
-      avatar: data['user']['profile_image_url'],
-      body: data['text'],
-      date: data['created_at'],
-      screenname: data['user']['screen_name']
-    };
+    var tweet = data;
+    delete tweet.id;
+    tweet.twid = data.id;
 
     // Create a new model instance with our object
     var tweetEntry = new Tweet(tweet);
