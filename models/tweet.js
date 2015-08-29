@@ -93,7 +93,7 @@ var schema = new mongoose.Schema({
       following: String,
       utc_offset: String
     },
-    id: String,
+    twid: String,
     coordinates: String,
     geo: String
   }
