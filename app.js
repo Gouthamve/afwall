@@ -7,8 +7,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./routes');
 
+if(process.env.MONGOLAB_URI){
+  mongoose.connect(process.env.MONGOLAB_URI);
+}else{
 mongoose.connect('mongodb://localhost/react-tweets');
-
+}
 var app = express();
 
 // view engine setup
